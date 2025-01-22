@@ -1,14 +1,37 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+A simple, interactive Todo List application that allows users to manage tasks efficiently. This project demonstrates modern web development practices using JavaScript, HTML, and CSS.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+### Features:
+
+1. **Add Todo Items**:
+
+   - Users can add tasks by providing a name and an optional due date.
+
+2. **Mark Tasks as Completed**:
+
+   - Users can toggle the completion status of tasks using checkboxes.
+
+3. **Remove Tasks**:
+
+   - Users can delete tasks from the list.
+
+4. **Form Validation**:
+
+   - Ensures that task names are provided before submission.
+
+5. **Reset Form After Submission**:
+   - Resets the form fields and validation state after successful submission.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+### Languages:
+
+- **JavaScript**: For application logic and DOM manipulation.
+- **HTML**: For structuring the application UI.
+- **CSS**: For styling the application and ensuring responsiveness.
 
 ## Deployment
 
