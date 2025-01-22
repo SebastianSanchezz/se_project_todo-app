@@ -37,4 +37,4 @@ A simple, interactive Todo List application that allows users to manage tasks ef
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+- [Todo App Link](https://sebastiansanchezz.github.io/se_project_todo-app/)
