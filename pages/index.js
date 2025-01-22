@@ -23,13 +23,10 @@ const generateTodo = (data) => {
   return todoElement;
 };
 
-addTodoButton.addEventListener("click", () => {
-  openModal(addTodoPopup);
-});
-
-addTodoCloseBtn.addEventListener("click", () => {
-  closeModal(addTodoPopup);
-});
+const renderTodo = (item) => {
+  const todo = generateTodo(item);
+  todosList.append(todo);
+};
 
 function generateUUID() {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
@@ -38,6 +35,14 @@ function generateUUID() {
     return v.toString(16);
   });
 }
+
+addTodoButton.addEventListener("click", () => {
+  openModal(addTodoPopup);
+});
+
+addTodoCloseBtn.addEventListener("click", () => {
+  closeModal(addTodoPopup);
+});
 
 addTodoForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
@@ -49,15 +54,15 @@ addTodoForm.addEventListener("submit", (evt) => {
 
   const id = generateUUID();
   const values = { name, date, id };
-  const todo = generateTodo(values);
-  todosList.append(todo);
+
+  renderTodo(values);
+
   closeModal(addTodoPopup);
+  newTodoValidator.resetValidation();
 });
 
-initialTodos.forEach((item) => {
-  const todo = generateTodo(item);
-  todosList.append(todo);
-});
+initialTodos.forEach(renderTodo);
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
+
 newTodoValidator.enableValidation();

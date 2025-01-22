@@ -77,6 +77,8 @@ class FormValidator {
       inputElement.value = "";
       this._hideInputError(inputElement);
     });
+
+    this._toggleButtonState();
   }
 }
 
