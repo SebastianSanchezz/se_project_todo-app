@@ -10,7 +10,6 @@ class Todo {
     this._todoCheckboxEl.addEventListener("change", () => {
       this._data.completed = !this._data.completed;
       this._toggleCompletion();
-      const increment = this._data.completed ? 1 : -1;
       this._handleCheck(this._data.completed);
     });
 

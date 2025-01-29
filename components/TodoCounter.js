@@ -17,9 +17,6 @@ class TodoCounter {
 
   updateTotal = (increment) => {
     this._total = Math.max(0, this._total + increment);
-
-    this._completed = Math.min(this._completed, this._total);
-
     this._updateText();
   };
 
